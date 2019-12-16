@@ -26,11 +26,7 @@
         [delegate cellEventsClick:self];
 }
 
-- (IBAction)settingClick:(id)sender
-{
-    if ([delegate respondsToSelector:@selector(cellSettingClick:)])
-        [delegate cellSettingClick:self];
-}
+
 
 #pragma mark - Utilities
 

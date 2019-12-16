@@ -24,17 +24,10 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *active;
 
 @property (weak, nonatomic) IBOutlet UILabel *labName;
-@property (weak, nonatomic) IBOutlet UILabel *labOnlineStatus;
-
-@property (weak, nonatomic) IBOutlet UILabel *labEvent;
 @property (weak, nonatomic) IBOutlet UILabel *labEventDate;
 
-@property (weak, nonatomic) IBOutlet UILabel *labSnapshot;
-@property (weak, nonatomic) IBOutlet UILabel *labSnapshotDate;
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonEvent;
-@property (weak, nonatomic) IBOutlet UIButton *buttonSetting;
-@property (weak, nonatomic) IBOutlet UIButton *buttonEventImage;
 
 @property (weak, nonatomic) id<DeviceCellDelegate> delegate;
 
@@ -43,8 +36,6 @@
 @end
 
 @protocol DeviceCellDelegate <NSObject>
-
-- (void)cellSettingClick:(DeviceCell *)cell;
 
 - (void)cellEventsClick:(DeviceCell *)cell;
 

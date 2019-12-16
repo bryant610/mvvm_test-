@@ -8,10 +8,12 @@
 
 #import "RootViewController.h"
 #import "RootTableProtocol.h"
+#import "DataBaseManager.h"
 
 @interface RootViewController ()<TSLManagerDelegate,RootTableProtocolDelegate>
 {
-    NSMutableArray<DataStruc *> *displayList;
+    NSMutableArray<DBRecordStruc *> *displayList;
+//    NSMutableArray<DataStruc *> *displayList;
     
     int total;
     
@@ -100,10 +102,20 @@
         
         dataStruc.image = image;
         
-        [[DataCenter sharedInstance].displayList addObject:dataStruc];
+        
+        [[DataBaseManager sharedInstance] addRecordWithChatStruc:dataStruc];
+        
+        
+        
+        
+        
+//        [[DataCenter sharedInstance].displayList addObject:dataStruc];
     }
     
-    displayList = [DataCenter sharedInstance].displayList;
+    NSMutableArray *array = [[DataBaseManager sharedInstance] getRecordList];
+    
+    
+    displayList = array;//[DataCenter sharedInstance].displayList;
     
     NSLog(@"displayList = %lu",(unsigned long)displayList.count);
     
@@ -122,10 +134,6 @@
 
 }
 
-- (void)cellClick:(DeviceCell *)cell
-{
-    NSLog(@"cellClick");
-}
 
 - (void)tableviewBottom
 {

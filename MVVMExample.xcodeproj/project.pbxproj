@@ -12,6 +12,10 @@
 		0F3B75011CD2539200E8F8C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F3B75001CD2539200E8F8C1 /* Assets.xcassets */; };
 		0F3B75041CD2539200E8F8C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3B75021CD2539200E8F8C1 /* LaunchScreen.storyboard */; };
 		5BB3A12F1CD7986800326DE9 /* PersonListViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3A12E1CD7986800326DE9 /* PersonListViewModelTests.m */; };
+		B5B6B21123A754E8005ECB44 /* DBRecordStruc+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B6B20923A754E8005ECB44 /* DBRecordStruc+CoreDataClass.m */; };
+		B5B6B21223A754E8005ECB44 /* DBRecordStruc+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B6B20A23A754E8005ECB44 /* DBRecordStruc+CoreDataProperties.m */; };
+		B5B6B21323A754E8005ECB44 /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B6B20B23A754E8005ECB44 /* DataBaseManager.m */; };
+		B5B6B21423A754E8005ECB44 /* DataBaseManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5B6B20C23A754E8005ECB44 /* DataBaseManager.xcdatamodeld */; };
 		B5DDB5D323A61DDD00DB6ED3 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DDB5D123A61DDD00DB6ED3 /* RootViewController.m */; };
 		B5DDB5D423A61DDD00DB6ED3 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5DDB5D223A61DDD00DB6ED3 /* RootViewController.xib */; };
 		B5DDB5E023A6217000DB6ED3 /* BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DDB5D723A6217000DB6ED3 /* BaseNavigationBar.m */; };
@@ -58,6 +62,13 @@
 		3DF13F10BDBA6A8AD19E7FA2 /* Pods-MVVMExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMExample/Pods-MVVMExample.debug.xcconfig"; sourceTree = "<group>"; };
 		5BB3A12E1CD7986800326DE9 /* PersonListViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonListViewModelTests.m; sourceTree = "<group>"; };
 		91060B12E0DA0BFF10CB03DB /* Pods-MVVMExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMExample/Pods-MVVMExample.release.xcconfig"; sourceTree = "<group>"; };
+		B5B6B20923A754E8005ECB44 /* DBRecordStruc+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBRecordStruc+CoreDataClass.m"; sourceTree = "<group>"; };
+		B5B6B20A23A754E8005ECB44 /* DBRecordStruc+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBRecordStruc+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5B6B20B23A754E8005ECB44 /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
+		B5B6B20D23A754E8005ECB44 /* 12OursDateBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 12OursDateBase.xcdatamodel; sourceTree = "<group>"; };
+		B5B6B20E23A754E8005ECB44 /* DBRecordStruc+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBRecordStruc+CoreDataClass.h"; sourceTree = "<group>"; };
+		B5B6B20F23A754E8005ECB44 /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
+		B5B6B21023A754E8005ECB44 /* DBRecordStruc+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBRecordStruc+CoreDataProperties.h"; sourceTree = "<group>"; };
 		B5DDB5D023A61DDD00DB6ED3 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		B5DDB5D123A61DDD00DB6ED3 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		B5DDB5D223A61DDD00DB6ED3 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
@@ -189,9 +200,24 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		B5B6B20823A754E8005ECB44 /* BoStorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				B5B6B20923A754E8005ECB44 /* DBRecordStruc+CoreDataClass.m */,
+				B5B6B20A23A754E8005ECB44 /* DBRecordStruc+CoreDataProperties.m */,
+				B5B6B20B23A754E8005ECB44 /* DataBaseManager.m */,
+				B5B6B20C23A754E8005ECB44 /* DataBaseManager.xcdatamodeld */,
+				B5B6B20E23A754E8005ECB44 /* DBRecordStruc+CoreDataClass.h */,
+				B5B6B20F23A754E8005ECB44 /* DataBaseManager.h */,
+				B5B6B21023A754E8005ECB44 /* DBRecordStruc+CoreDataProperties.h */,
+			);
+			path = BoStorageManager;
+			sourceTree = "<group>";
+		};
 		B5DDB5D523A6212D00DB6ED3 /* General Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B5B6B20823A754E8005ECB44 /* BoStorageManager */,
 				B5DDB60E23A6AC6600DB6ED3 /* AlertProcessView */,
 				B5DDB60A23A69A3200DB6ED3 /* ThumbnailTempCache */,
 				B5DDB5FD23A6730800DB6ED3 /* Structure */,
@@ -492,19 +518,23 @@
 			files = (
 				B5DDB5FC23A672CB00DB6ED3 /* DataStruc.m in Sources */,
 				B5DDB61323A6AC6600DB6ED3 /* AlertProcessView.m in Sources */,
+				B5B6B21123A754E8005ECB44 /* DBRecordStruc+CoreDataClass.m in Sources */,
 				B5DDB5EC23A6274900DB6ED3 /* RootTableProtocol.m in Sources */,
 				B5DDB5E223A6217000DB6ED3 /* BaseViewController.m in Sources */,
 				B5DDB5E123A6217000DB6ED3 /* BaseAlertView.m in Sources */,
 				B5DDB5D323A61DDD00DB6ED3 /* RootViewController.m in Sources */,
 				B5DDB5E023A6217000DB6ED3 /* BaseNavigationBar.m in Sources */,
+				B5B6B21323A754E8005ECB44 /* DataBaseManager.m in Sources */,
 				B5DDB60123A6733600DB6ED3 /* AutoBindObject.m in Sources */,
 				B5DDB5E323A6217000DB6ED3 /* BaseNavigationController.m in Sources */,
 				0F3B74F91CD2539200E8F8C1 /* AppDelegate.m in Sources */,
 				B5DDB5E923A6239600DB6ED3 /* XTBubbleTransition.m in Sources */,
+				B5B6B21223A754E8005ECB44 /* DBRecordStruc+CoreDataProperties.m in Sources */,
 				B5DDB60823A696FA00DB6ED3 /* DeviceCell.m in Sources */,
 				B5DDB60D23A69A3200DB6ED3 /* ThumbnailTempCache.m in Sources */,
 				B5DDB60423A67D1C00DB6ED3 /* DataCenter.m in Sources */,
 				0F3B74F61CD2539200E8F8C1 /* main.m in Sources */,
+				B5B6B21423A754E8005ECB44 /* DataBaseManager.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +749,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B5B6B20C23A754E8005ECB44 /* DataBaseManager.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5B6B20D23A754E8005ECB44 /* 12OursDateBase.xcdatamodel */,
+			);
+			currentVersion = B5B6B20D23A754E8005ECB44 /* 12OursDateBase.xcdatamodel */;
+			path = DataBaseManager.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0F3B74E91CD2539200E8F8C1 /* Project object */;
 }

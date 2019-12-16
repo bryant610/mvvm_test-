@@ -7,6 +7,7 @@
 //
 
 #import "RootTableProtocol.h"
+#import "DBRecordStruc+CoreDataClass.h"
 
 @implementation RootTableProtocol
 @synthesize detailArray;
@@ -47,11 +48,6 @@
     return NO;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height)
@@ -60,11 +56,15 @@
         [delegate tableviewBottom];
     }
 }
-- (void)Cell:(DeviceCell *)cell MappingStruc:(DataStruc *)dataStruc
+- (void)Cell:(DeviceCell *)cell MappingStruc:(DBRecordStruc *)dataStruc
 {
     cell.labName.text = dataStruc.name;
     
-    [cell.imageViewSnapshot setImage:dataStruc.image];
+    cell.labEventDate.text = dataStruc.date;
+    
+    [cell.imageViewSnapshot setImage:[UIImage imageWithData:dataStruc.image]];
+    
+//    [cell.imageViewSnapshot setImage:dataStruc.image];
     
 }
 - (void)cellEventsClick:(DeviceCell *)cell {
@@ -75,8 +75,5 @@
     NSLog(@"cellLiveStreamingClick");
 }
 
-- (void)cellSettingClick:(DeviceCell *)cell {
-    NSLog(@"cellSettingClick");
-}
 
 @end
